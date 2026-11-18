@@ -28,6 +28,39 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      builder: (BuildContext context, Widget? child) {
+        // Frames the application inside a centered iPhone-like viewport
+        // with rounded corners and realistic elevation on desktop/web displays.
+        return Container(
+          color: const Color(0xFF1E1E2E), // Modern sleek backdrop
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 420, maxHeight: 860),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(28),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: const <BoxShadow>[
+                      BoxShadow(
+                        color: Color(0x66000000),
+                        blurRadius: 36,
+                        spreadRadius: 4,
+                        offset: Offset(0, 12),
+                      ),
+                    ],
+                    border: Border.all(
+                      color: const Color(0xFF313244),
+                      width: 4,
+                    ),
+                  ),
+                  child: child,
+                ),
+              ),
+            ),
+          ),
+        );
+      },
       home: const PostsScreen(),
       routes: <String, WidgetBuilder>{
         '/favorites': (BuildContext context) => FavoritesScreen(),
