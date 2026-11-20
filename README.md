@@ -257,13 +257,13 @@ To test offline functionality and verify requirements for lab grading:
 
 ## 📸 Submission Screenshots
 
-| Screen | Description | Screenshot Placeholder |
+| Screen | Description | iPhone Preview |
 | :--- | :--- | :---: |
-| **1. Online Posts Screen** | All posts loaded from REST API and cached | *(Insert screenshot of Posts screen online)* |
-| **2. Offline Caching** | Posts loaded offline from Hive cache in Airplane Mode | *(Insert screenshot of Posts screen offline)* |
-| **3. Favoriting Action** | Star icons toggled amber on selected posts | *(Insert screenshot with favorited stars)* |
-| **4. Favorites Screen** | Curated list of favorited posts | *(Insert screenshot of FavoritesScreen)* |
-| **5. Empty Favorites State** | Placeholder when no posts are favorited | *(Insert screenshot of "No favorites yet")* |
+| **1. Online Posts Screen** | All posts fetched from API and cached in `postsBox` | <img src="screenshots/01_online_posts.jpg" width="260" alt="Online Posts Screen" /> |
+| **2. Favoriting Action** | Star icons reactively toggled amber on selected posts | <img src="screenshots/02_favoriting_action.jpg" width="260" alt="Favoriting Action" /> |
+| **3. Favorites Screen** | Curated list of favorited posts stored in `favoritesBox` | <img src="screenshots/03_favorites_screen.jpg" width="260" alt="Favorites Screen" /> |
+| **4. Offline Caching Mode** | Posts seamlessly loaded from local Hive cache | <img src="screenshots/04_offline_mode.jpg" width="260" alt="Offline Mode" /> |
+| **5. Empty Favorites State** | Friendly empty placeholder when no posts are favorited | <img src="screenshots/05_empty_favorites.png" width="260" alt="Empty Favorites State" /> |
 
 ---
 

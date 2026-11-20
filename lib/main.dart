@@ -29,8 +29,13 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       builder: (BuildContext context, Widget? child) {
-        // Frames the application inside a centered iPhone-like viewport
-        // with rounded corners and realistic elevation on desktop/web displays.
+        final double screenWidth = MediaQuery.of(context).size.width;
+        // If running directly on a mobile screen or in Chrome Device Mode (width <= 500):
+        if (screenWidth <= 500) {
+          return child ?? const SizedBox.shrink();
+        }
+
+        // On wide desktop/web displays: frame inside a centered iPhone-like viewport:
         return Container(
           color: const Color(0xFF1E1E2E), // Modern sleek backdrop
           child: Center(
